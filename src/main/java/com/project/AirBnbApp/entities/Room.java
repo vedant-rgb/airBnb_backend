@@ -18,7 +18,7 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)//as here fetch is lazy so in RoomDTO if we not used hotel field then it will not fetch it
     @JoinColumn(name = "hotel_id",nullable = false)
     private Hotel hotel;
 

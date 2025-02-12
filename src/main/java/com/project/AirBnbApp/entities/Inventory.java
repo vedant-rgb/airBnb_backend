@@ -1,8 +1,7 @@
 package com.project.AirBnbApp.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -20,6 +19,9 @@ import java.util.Locale;
                 columnNames = {"hotel_id","room_id","date"}
         )
 )
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
