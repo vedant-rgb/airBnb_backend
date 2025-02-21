@@ -26,7 +26,7 @@ public class Hotel {
 
     private String city;
 
-    @ManyToOne
+    @ManyToOne(optional = false,fetch = FetchType.LAZY)
     private User owner;
 
     @Column(columnDefinition = "TEXT[]")
